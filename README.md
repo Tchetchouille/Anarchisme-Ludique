@@ -21,7 +21,7 @@ Convertir un valet demande de défausser des cartes depuis le pot commun pour un
 Une fois l'action effectuée, lae joueur·euse suivant·e effectue son tour.
 
 
-FIN DU JEU
+## FIN DU JEU
 La partie se termine lorsque le dernier valet a été converti ou vaincu, ou lorsque aucune autre action n'est possible (récolter des ressources, vaincre ou recruter un valet).
 - Si tous les valets on été vaincus, le jeu se termine par une victoire des anarchistes ; chaque joueur·euse·x gagne 5 points. 
 - Si les quatre valets ont été convertis et/ou vaincus, et qu'au moins un·e joueur·euse·x a un valet converti qui n'a pas été vain
@@ -32,5 +32,5 @@ La partie se termine lorsque le dernier valet a été converti ou vaincu, ou lor
 Effectuer 3/4/5 parties pour déclarer lae gagnant·e final·e du jeu.
 
 Photos
-()[!]
-
+![Une photo de la disposition initiale du jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/mise_en_place.png)
+![Une photo d'une partie potentielle de jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/partie_potentielle.png)
