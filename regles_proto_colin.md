@@ -6,7 +6,7 @@
 4. Les As servent à tirer des couleurs aléatoires
 5. Les numéros sur les cartes indiquent un nombre de personnes que vous aurez à vos côtés pour un type de tâches
 6. Les personnes d'un type (p.ex. des universitaires/trèfles) peuvent être affiliées à d'autres tâches avec un malus /2 (arrondi supérieur)
-7. Les différents valets doivent en priorité être défaussé : ils constituent la garde des élites. Il y a besoin de 35 personnes dans une couleur pour être recruté, mais 20 pour être défaussé
+7. Les différents valets doivent en priorité être défaussé : ils constituent la garde des élites. Il y a besoin de 15 personnes dans une couleur pour être recruté, mais 25 pour être défaussé
 8. Recruter des valets : une fois recruté, les valets octroient un bonus de 15 personnes dans une couleur. Une fois recruté un valet peut toujours être défaussé par les autres joueureuses.
 
 ## Rois et reines
