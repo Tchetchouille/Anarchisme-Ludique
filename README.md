@@ -32,5 +32,5 @@ La partie se termine lorsque le dernier valet a été converti ou vaincu, ou lor
 Effectuer 3/4/5 parties pour déclarer lae gagnant·e final·e du jeu.
 
 Photos
-![Une photo de la disposition initiale du jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/mise_en_place.png)
-![Une photo d'une partie potentielle de jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets. Dans le pot commun se trouvent un six de coeur, un six de carreau et un huit et six de pique. Le valet de pique a été vaincu et le valet de pique a été converti par unex joueur·euse·x](photos/partie_potentielle.png)
+![Une photo de la disposition initiale du jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/mise_en_place.jpg)
+![Une photo d'une partie potentielle de jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets. Dans le pot commun se trouvent un six de coeur, un six de carreau et un huit et six de pique. Le valet de pique a été vaincu et le valet de pique a été converti par unex joueur·euse·x](photos/partie_potentielle.jpg)
