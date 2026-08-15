@@ -12,25 +12,25 @@ Sortir les figures du paquet. Mettre les 4 valets à part et mélanger le reste 
 Vous êtes des révolutionnaires. Votre objectif est de renverser le pouvoir en place. La partie s'arrête quand chacun des quatre valets a été converti ou vaincu.
 
 ## TOUR DE JEU
-Chaque joueur·euse jouera l’un·e après l’autre dans le sens horaire. La personne la plus privilégiée commence. À son tour une personne a deux actions possibles :
+Chaque joueur·euse·x jouera l’unex après l’autre dans le sens horaire. La personne la plus privilégiée commence. À son tour une personne a deux actions possibles :
 - Récolter des ressources militantes et les ajouter au pot commun:
 - Récolter des ressources implique de tirer une unique carte depuis l'un des quatre paquets situés sous les valets. Cette carte est ensuite ajouté au pot commun.
 - Utiliser les ressources du pot commun pour convertir ou vaincre un valet
-Convertir un valet demande de défausser des cartes depuis le pot commun pour un total égal ou supérieur à 15 / 20 / 25. Vaincre un valet demande de défausser des cartes depuis le pot commun pour un total égal ou supérieur à 15 / 20 / 25. Il est possible de vaincre un valet converti par un·e·x autre joueur·euse·x. Mais il n'est pas possible de convertir un valet convertir / Convertir un valet déjà converti demande de défausser des ressources pour un total égal ou suppérieur à 15 / 20 / 25 / 30.
+Convertir un valet demande de défausser des cartes depuis le pot commun pour un total égal ou supérieur à 15 / 20 / 25. Vaincre un valet demande de défausser des cartes depuis le pot commun pour un total égal ou supérieur à 15 / 20 / 25. Il est possible de vaincre un valet converti par un·e·x autre joueur·euse·x, mais il n'est pas possible de convertir un valet déjà converti.
 
-Une fois l'action effectuée, lae joueur·euse suivant·e effectue son tour.
+Une fois l'action effectuée, lae joueur·euse·x suivant·e·x effectue son tour.
 
 
 ## FIN DU JEU
 La partie se termine lorsque le dernier valet a été converti ou vaincu, ou lorsque aucune autre action n'est possible (récolter des ressources, vaincre ou recruter un valet).
-- Si tous les valets on été vaincus, le jeu se termine par une victoire des anarchistes ; chaque joueur·euse·x gagne 5 points. 
-- Si les quatre valets ont été convertis et/ou vaincus, et qu'au moins un·e joueur·euse·x a un valet converti qui n'a pas été vain
+- Si tous les valets on été vaincus, le jeu se termine par une révolution **anarchiste** ; chaque joueur·euse·x gagne 5 points. 
+- Si les quatre valets ont été convertis et/ou vaincus, et qu'au moins un·e joueur·euse·x a un valet converti face à ellui
 - Si ce n'est pas le cas, la personne avec le plus de valets gagne 2 points par valet recruté, les autres perdent 1 point par valet recruté.
-- S'il y a une égalité entre le nombre de valets, les personnes à égalité gagent 2 points chacun·e.
+- Si les quatre paquets de cartes ont été
 
  
 Effectuer 3/4/5 parties pour déclarer lae gagnant·e final·e du jeu.
 
 Photos
 ![Une photo de la disposition initiale du jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/mise_en_place.png)
-![Une photo d'une partie potentielle de jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/partie_potentielle.png)
+![Une photo d'une partie potentielle de jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets. Dans le pot commun se trouvent un six de coeur, un six de carreau et un huit et six de pique. Le valet de pique a été vaincu et le valet de pique a été converti par unex joueur·euse·x](photos/partie_potentielle.png)
