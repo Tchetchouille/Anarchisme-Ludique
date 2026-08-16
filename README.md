@@ -22,14 +22,16 @@ Une fois l'action effectuée, lae joueur·euse·x suivant·e·x effectue son tou
 
 
 ## FIN DU JEU
-La partie se termine lorsque le dernier valet a été converti ou vaincu, ou lorsque aucune autre action n'est possible (récolter des ressources, vaincre ou recruter un valet).
+La partie se termine lorsque le dernier valet a été vaincu, ou lorsque aucune autre action n'est possible (récolter des ressources, vaincre ou recruter un valet).
+### Ligne de défense des valets épuisée
 - Si tous les valets on été vaincus, le jeu se termine par une révolution **anarchiste** ; chaque joueur·euse·x gagne 5 points. 
-- Si les quatre valets ont été convertis et/ou vaincus, et qu'au moins un·e joueur·euse·x a un valet converti face à ellui
-- Si ce n'est pas le cas, la personne avec le plus de valets gagne 2 points par valet recruté, les autres perdent 1 point par valet recruté.
-- Si les quatre paquets de cartes ont été
+- Si tous les valets ont été convertis ou vaincus, et qu'au moins un·e joueur·euse·x a un valet converti face à ellui, alors le régime change mais demeure vertical. La personne ayant le plus de valets devant elle (convertis, mais non vaincus par d'autres joueur·euse·xs) à la fin gagne 2pts pour chaque valets encore présents, tandis que les autres perdent 1pt par valets devant elleux. En cas d'égalité, la personne la plus privilégiée peut convertir le valet d'une autre personne.
+### Ligne de défense des valets partiellement complète
+- Si les ressources ont été épuisées et qu'il reste des valets non vaincus, et que des personnes ont des valets convertis devant elles, alors la révolution est un échec et ses instigateurs seront fortement punis. Tout le monde perd 1 point. De plus, les joueur·euse·xs avec des valets devant elleux perdent 3pts par valets recrutés.
+- Si les ressources ont été épuisées et qu'il reste des valets non vaincus, mais que personne n'a de valets convertis devant ellui, la partie se solde par un échec de la révolution. Chaque joueur·euse·x perd 2 points.
 
  
-Effectuer 3/4/5 parties pour déclarer lae gagnant·e final·e du jeu.
+Effectuer 3/4/5 parties pour déclarer lae gagnant·e·x final·e·x du jeu.
 
 Photos
 ![Une photo de la disposition initiale du jeu avec les 4 paquets de couleur devant chaque valet. Le roi de coeur est protégé par les valets.](photos/mise_en_place.jpg)
