@@ -1,4 +1,4 @@
-# Noircira
+# NoirCIRA
 
 ## MATÉRIEL
 - Paquet  de 36 / 52 cartes
