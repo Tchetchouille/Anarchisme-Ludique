@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cf0jjo6sjxlch"]
+
+[ext_resource type="PackedScene" uid="uid://c5m0deyv60x4s" path="res://hang_scenes/hangperson.tscn" id="1_jud66"]
+
+[node name="TestingGrounds" type="Node2D" unique_id=1556984769]
+
+[node name="Hangperson" parent="." unique_id=902780941 instance=ExtResource("1_jud66")]
+position = Vector2(495, 356)
