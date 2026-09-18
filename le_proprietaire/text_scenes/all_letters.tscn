@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cltxamdkx0dpy"]
+
+[node name="AllLetters" type="GridContainer" unique_id=472253517]
+size_flags_horizontal = 3
+size_flags_vertical = 3

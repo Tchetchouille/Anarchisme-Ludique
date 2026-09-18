@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://biyx4ynp2gjny"]
+
+[ext_resource type="Script" uid="uid://cmil1hjxw0vq" path="res://text_scenes/scripts/chosen_word.gd" id="1_vgge0"]
+
+[node name="ChosenWord" type="Control" unique_id=571526054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_vgge0")
+
+[node name="GridContainer" type="HBoxContainer" parent="." unique_id=581659294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginLeft" type="Control" parent="GridContainer" unique_id=923310911]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Center" type="Control" parent="GridContainer" unique_id=1730053121]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="GridContainer/Center" unique_id=846003756]
+propagate_maximum_size = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginRight" type="Control" parent="GridContainer" unique_id=1868869921]
+layout_mode = 2
+size_flags_horizontal = 3
