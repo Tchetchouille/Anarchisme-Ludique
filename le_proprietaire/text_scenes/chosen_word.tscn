@@ -1,5 +1,64 @@
 [gd_scene format=3 uid="uid://biyx4ynp2gjny"]
 
+[ext_resource type="Texture2D" uid="uid://dyjrr7mxmxqw6" path="res://sprites/confetto.png" id="1_vgge0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0tmh"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_rnpyo"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7561983, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.41573036), -3.2134805, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_pls5a"]
+curve = SubResource("Curve_rnpyo")
+
+[sub_resource type="Gradient" id="Gradient_vgge0"]
+offsets = PackedFloat32Array(0.2777778, 0.29166666, 0.5092593, 0.5138889, 0.7592593, 0.7685185)
+colors = PackedColorArray(0.11973856, 0.59466326, 0.5446756, 1, 0.74509805, 0.5921569, 0.2901961, 1, 0.74526894, 0.5925293, 0.29094675, 1, 0.6944994, 0, 0.29952756, 1, 0.78602254, 0, 0.33900017, 1, 0.5901686, 0.15314528, 0.91323525, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_etjcp"]
+gradient = SubResource("Gradient_vgge0")
+
+[sub_resource type="Curve" id="Curve_dvggi"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.19421487, 0.764045), -0.8545745, -0.8545745, 0, 0, Vector2(1, 1), -2.392809, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xod18"]
+curve = SubResource("Curve_dvggi")
+
+[sub_resource type="Curve" id="Curve_etjcp"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.76446277, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.42696637), -4.35056, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_vgge0"]
+curve = SubResource("Curve_etjcp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1lqrt"]
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 190.0
+initial_velocity_max = 220.0
+angular_velocity_min = -180.00002
+angular_velocity_max = 179.99998
+gravity = Vector3(0, 75, 0)
+linear_accel_min = 9.999997
+linear_accel_max = 29.999996
+damping_min = 74.0
+damping_max = 78.0
+damping_curve = SubResource("CurveTexture_xod18")
+scale_min = 0.45
+scale_max = 0.75
+scale_curve = SubResource("CurveTexture_vgge0")
+color_initial_ramp = SubResource("GradientTexture1D_etjcp")
+alpha_curve = SubResource("CurveTexture_pls5a")
+hue_variation_min = -0.050000023
+hue_variation_max = 0.049999975
+anim_speed_min = 2.0
+anim_speed_max = 5.0
+anim_offset_max = 1.0
+
 [node name="ChosenWord" type="Control" unique_id=571526054]
 layout_mode = 3
 anchors_preset = 15
@@ -39,3 +98,14 @@ vertical_alignment = 1
 [node name="MarginRight" type="Control" parent="GridContainer" unique_id=1868869921]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Victory" type="GPUParticles2D" parent="." unique_id=1319869812]
+material = SubResource("CanvasItemMaterial_q0tmh")
+position = Vector2(593, 104)
+emitting = false
+amount = 114
+texture = ExtResource("1_vgge0")
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.94
+process_material = SubResource("ParticleProcessMaterial_1lqrt")

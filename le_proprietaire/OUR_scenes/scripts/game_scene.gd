@@ -4,6 +4,8 @@ extends Control
 @export var word = null
 
 var word_found = []
+var erreurs = 0
+var tour = 0
 #var scene : PackedScene = preload("res://text_scenes/dash.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +13,6 @@ func _ready() -> void:
 	all_words = FileAccess.open("res://data/liste_mots.txt", FileAccess.READ).get_as_text()
 	all_words = Array(all_words.strip_edges().split("\n"))
 	pick_random_word()
-	#update_word("i")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -40,14 +41,24 @@ func display_word_dash():
 func update_word(char:String):
 	var dico = check_letter_in_word(char)
 	var fin_string = ""
+	tour += 1
+	var err  = !(true in dico["changes"])
 	for i in range(len(dico["changes"])):
 		if dico["changes"][i] or word_found[i]:
 			fin_string += word[i] + " "
 			word_found[i] = true
 		else :
 			fin_string += "_ "
+			pendre()
+	if err:
+		erreurs += 1
+		if erreurs>=12:
+			end_game_victoire()
+	print(tour," --- ", erreurs)
 	print(fin_string)
 	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
+	if Array(fin_string.strip_edges().split(" ")) == word_found:
+		end_game_perdu()
 
 func check_letter_in_word(char:String):
 	var dico = {"letter":char, "changes":[]}
@@ -57,6 +68,11 @@ func check_letter_in_word(char:String):
 	dico["changes"] = changes
 	return dico
 
-func _on_letter_button_pressed():
-	print("HELLOOOOOO")
+func end_game_perdu():
+	pass
+
+func end_game_victoire():
+	$VBoxContainer/ChosenWord/Victory.emitting = true
+
+func pendre():
 	pass
