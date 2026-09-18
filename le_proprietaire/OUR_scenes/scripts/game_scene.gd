@@ -3,6 +3,7 @@ extends Control
 @export var all_words = null
 @export var word = null
 
+var word_found = []
 #var scene : PackedScene = preload("res://text_scenes/dash.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +21,8 @@ func pick_random_word():
 	word = all_words.pick_random()
 	print(word)
 	print(len(word))
+	for x in word:
+		word_found.append(false)
 	display_word_dash()
 
 func display_word_dash():
@@ -38,8 +41,9 @@ func update_word(char:String):
 	var dico = check_letter_in_word(char)
 	var fin_string = ""
 	for i in range(len(dico["changes"])):
-		if dico["changes"][i] :
+		if dico["changes"][i] or word_found[i]:
 			fin_string += word[i] + " "
+			word_found[i] = true
 		else :
 			fin_string += "_ "
 	print(fin_string)
@@ -49,7 +53,7 @@ func check_letter_in_word(char:String):
 	var dico = {"letter":char, "changes":[]}
 	var changes = []
 	for c in word:
-		changes.append(c.to_lower() in char)
+		changes.append(c in char)
 	dico["changes"] = changes
 	return dico
 
