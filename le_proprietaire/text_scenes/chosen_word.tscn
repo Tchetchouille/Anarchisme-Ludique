@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://biyx4ynp2gjny"]
 
-[ext_resource type="Script" uid="uid://cmil1hjxw0vq" path="res://text_scenes/scripts/chosen_word.gd" id="1_vgge0"]
-
 [node name="ChosenWord" type="Control" unique_id=571526054]
 layout_mode = 3
 anchors_preset = 15
@@ -10,7 +8,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-script = ExtResource("1_vgge0")
 
 [node name="GridContainer" type="HBoxContainer" parent="." unique_id=581659294]
 layout_mode = 1

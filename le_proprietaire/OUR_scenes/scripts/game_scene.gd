@@ -10,7 +10,7 @@ func _ready() -> void:
 	all_words = FileAccess.open("res://data/liste_mots.txt", FileAccess.READ).get_as_text()
 	all_words = Array(all_words.strip_edges().split("\n"))
 	pick_random_word()
-	update_word("i")
+	#update_word("i")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,8 +24,8 @@ func pick_random_word():
 
 func display_word_dash():
 	var pre_dash = preload("res://text_scenes/dash.tscn")
-	$GridContainer/Center.size_flags_stretch_ratio = len(word)
-	$GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
+	$VBoxContainer/ChosenWord/GridContainer/Center.size_flags_stretch_ratio = len(word)
+	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
 	"""
 	for i in word:
 		var new_dash = scene.instantiate()
@@ -43,7 +43,7 @@ func update_word(char:String):
 		else :
 			fin_string += "_ "
 	print(fin_string)
-	$GridContainer/Center/Label.text = fin_string.strip_edges()
+	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
 
 func check_letter_in_word(char:String):
 	var dico = {"letter":char, "changes":[]}

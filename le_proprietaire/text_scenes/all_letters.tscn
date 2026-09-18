@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cltxamdkx0dpy"]
 
+[ext_resource type="Script" uid="uid://cvp1cp8emnlga" path="res://text_scenes/scripts/all_letters.gd" id="1_vqehs"]
+
 [node name="AllLetters" type="GridContainer" unique_id=472253517]
 size_flags_horizontal = 3
 size_flags_vertical = 3
+columns = 7
+script = ExtResource("1_vqehs")

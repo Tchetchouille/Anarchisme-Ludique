@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dksfel46twh1d"]
+
+[ext_resource type="Theme" uid="uid://0rnnf4t1ifkj" path="res://fonts/letter_button.tres" id="1_lwtgm"]
+[ext_resource type="Script" uid="uid://cyc0x5sxde8qm" path="res://text_scenes/scripts/letter_button.gd" id="2_b8ajg"]
+
+[node name="LetterButton" type="Button" unique_id=563796958]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_lwtgm")
+script = ExtResource("2_b8ajg")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

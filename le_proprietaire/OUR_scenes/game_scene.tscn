@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bma2j0uw17ouq"]
 
 [ext_resource type="PackedScene" uid="uid://cltxamdkx0dpy" path="res://text_scenes/all_letters.tscn" id="1_6cw8a"]
+[ext_resource type="Script" uid="uid://d2dwhnqdvyguo" path="res://OUR_scenes/scripts/game_scene.gd" id="1_b3lu6"]
 [ext_resource type="PackedScene" uid="uid://biyx4ynp2gjny" path="res://text_scenes/chosen_word.tscn" id="1_ktn5l"]
 
 [node name="GameScene" type="Control" unique_id=615237832]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b3lu6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=635485373]
 layout_mode = 1
