@@ -306,13 +306,13 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_xxhvd")
 
 [node name="BodyToLeftArm" type="PinJoint2D" parent="Body" unique_id=210438780]
-position = Vector2(169, -128)
+position = Vector2(175, -125)
 node_a = NodePath("../Body")
 node_b = NodePath("../LeftArm")
 disable_collision = false
 
 [node name="LeftArm" type="RigidBody2D" parent="Body" unique_id=1671086527]
-position = Vector2(171, -125)
+position = Vector2(174, -125)
 mass = 0.5
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftArm" unique_id=376860614]
@@ -328,13 +328,13 @@ position = Vector2(-35.99997, -2.1999817)
 shape = SubResource("CircleShape2D_00xjj")
 
 [node name="BodyToRightArm" type="PinJoint2D" parent="Body" unique_id=669454550]
-position = Vector2(181, -128)
+position = Vector2(175, -125)
 node_a = NodePath("../Body")
 node_b = NodePath("../RightArm")
 disable_collision = false
 
 [node name="RightArm" type="RigidBody2D" parent="Body" unique_id=264264367]
-position = Vector2(179, -125)
+position = Vector2(177, -125)
 mass = 0.5
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/RightArm" unique_id=1599959060]
@@ -350,12 +350,12 @@ position = Vector2(35.000046, 1.2000427)
 shape = SubResource("CircleShape2D_00xjj")
 
 [node name="BodyToLeftLeg" type="PinJoint2D" parent="Body" unique_id=394652067]
-position = Vector2(165, -54)
+position = Vector2(175, -54)
 node_a = NodePath("../Body")
 node_b = NodePath("../LeftLeg")
 
 [node name="LeftLeg" type="RigidBody2D" parent="Body" unique_id=1491960658]
-position = Vector2(155, -29)
+position = Vector2(157, -32)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftLeg" unique_id=1845252040]
 position = Vector2(7, -6.9999957)
@@ -370,12 +370,12 @@ position = Vector2(-6, 8)
 shape = SubResource("CircleShape2D_02yu5")
 
 [node name="BodyToRightLeg" type="PinJoint2D" parent="Body" unique_id=69041945]
-position = Vector2(186, -54)
+position = Vector2(175, -54)
 node_a = NodePath("../Body")
 node_b = NodePath("../RightLeg")
 
 [node name="RightLeg" type="RigidBody2D" parent="Body" unique_id=1279871892]
-position = Vector2(196, -28)
+position = Vector2(193, -30)
 mass = 0.5
 
 [node name="Sprite2D2" type="AnimatedSprite2D" parent="Body/RightLeg" unique_id=1180786476]
