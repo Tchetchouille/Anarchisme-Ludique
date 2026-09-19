@@ -142,7 +142,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_00xjj"]
-radius = 8.062258
+radius = 11.065228
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0kq4c"]
 animations = [{
@@ -251,7 +251,7 @@ position = Vector2(177, -284)
 node_a = NodePath("../Body/Head")
 node_b = NodePath("../Scaffold")
 disable_collision = false
-length = 74.0
+length = 20.0
 rest_length = 10.0
 stiffness = 64.0
 damping = 0.1
@@ -261,7 +261,6 @@ position = Vector2(3, 18)
 
 [node name="Head" type="RigidBody2D" parent="Body" unique_id=897217739]
 position = Vector2(173, -221)
-mass = 0.5
 
 [node name="HeadSprite" type="AnimatedSprite2D" parent="Body/Head" unique_id=2100723473]
 position = Vector2(0.19999695, 35.800003)
@@ -295,7 +294,6 @@ node_b = NodePath("../Body")
 
 [node name="Body" type="RigidBody2D" parent="Body" unique_id=263474123]
 position = Vector2(175, -98)
-mass = 0.5
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/Body" unique_id=2012252091]
 scale = Vector2(0.6, 0.6)
@@ -358,7 +356,6 @@ node_b = NodePath("../LeftLeg")
 
 [node name="LeftLeg" type="RigidBody2D" parent="Body" unique_id=1491960658]
 position = Vector2(155, -29)
-mass = 0.5
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftLeg" unique_id=1845252040]
 position = Vector2(7, -6.9999957)
