@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu4cb4gxjpobc"
-path="res://.godot/imported/body_5.png-0cc2c068e6692eafa7ff33f770853077.ctex"
+uid="uid://c34ubbshy74qf"
+path="res://.godot/imported/scaffold_bar_3.png-b4d66eaacaecb8a5e418b53f3da0ae5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/body_5.png"
-dest_files=["res://.godot/imported/body_5.png-0cc2c068e6692eafa7ff33f770853077.ctex"]
+source_file="res://sprites/scaffold_bar_3.png"
+dest_files=["res://.godot/imported/scaffold_bar_3.png-b4d66eaacaecb8a5e418b53f3da0ae5f.ctex"]
 
 [params]
 

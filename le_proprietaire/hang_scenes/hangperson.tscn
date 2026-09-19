@@ -1,180 +1,421 @@
 [gd_scene format=3 uid="uid://c5m0deyv60x4s"]
 
 [ext_resource type="Script" uid="uid://bxc4e3eaid2i0" path="res://hang_scenes/hangperson.gd" id="1_tde3e"]
-[ext_resource type="Texture2D" uid="uid://0x5acxu3jt64" path="res://sprites/body_1.png" id="2_bxtur"]
-[ext_resource type="Texture2D" uid="uid://cvrujly7gsnpv" path="res://sprites/rope.png" id="2_isqeo"]
-[ext_resource type="Texture2D" uid="uid://d1xewfakpr8kq" path="res://sprites/scaffold_1.png" id="2_thvrr"]
-[ext_resource type="Texture2D" uid="uid://b2hww1siubds4" path="res://sprites/scaffold_2.png" id="3_bxtur"]
-[ext_resource type="Texture2D" uid="uid://bchg5vy0wryc3" path="res://sprites/face_camarade.png" id="4_810l7"]
-[ext_resource type="Texture2D" uid="uid://dpkeu1hc6cp3i" path="res://sprites/scaffold_3.png" id="4_isqeo"]
-[ext_resource type="Texture2D" uid="uid://bptgbqibmursd" path="res://sprites/scaffold_4.png" id="5_810l7"]
-[ext_resource type="Texture2D" uid="uid://daceaxej7q16c" path="res://sprites/face_propriétaire.png" id="5_g45r0"]
-[ext_resource type="Texture2D" uid="uid://5a4kl1j05012" path="res://sprites/body_2.png" id="6_g45r0"]
-[ext_resource type="Texture2D" uid="uid://c4ffl75n4java" path="res://sprites/body_3.png" id="7_ng41p"]
-[ext_resource type="Texture2D" uid="uid://cu4cb4gxjpobc" path="res://sprites/body_5.png" id="7_yfgup"]
-[ext_resource type="Texture2D" uid="uid://4w85ugls6mfa" path="res://sprites/body_4.png" id="8_lbuqe"]
-[ext_resource type="Texture2D" uid="uid://bflc2qwoq14w3" path="res://sprites/body_6.png" id="8_ng41p"]
+[ext_resource type="Texture2D" uid="uid://l4xuup2hyeyt" path="res://sprites/body_1.png" id="2_bxtur"]
+[ext_resource type="Texture2D" uid="uid://brndoddn7iiuw" path="res://sprites/rope_1.png" id="2_md0m0"]
+[ext_resource type="Texture2D" uid="uid://buj3jd6iht1ud" path="res://sprites/rope_2.png" id="3_odmpd"]
+[ext_resource type="Texture2D" uid="uid://bmxcmxe2t0nu0" path="res://sprites/rope_3.png" id="4_nag4t"]
+[ext_resource type="Script" uid="uid://dh4ng1kr3fokh" path="res://hang_scenes/rope.gd" id="5_odmpd"]
+[ext_resource type="Texture2D" uid="uid://djxja2exsybpn" path="res://sprites/head_1.png" id="6_g7v0d"]
+[ext_resource type="Texture2D" uid="uid://trqc0rljcqkp" path="res://sprites/body_2.png" id="6_g45r0"]
+[ext_resource type="Texture2D" uid="uid://4eqtqhxbcb0v" path="res://sprites/head_2.png" id="7_augx5"]
+[ext_resource type="Texture2D" uid="uid://dudq7mukt2odn" path="res://sprites/body_3.png" id="7_ng41p"]
+[ext_resource type="Texture2D" uid="uid://bvvruk5c7ys1r" path="res://sprites/head_3.png" id="8_md0m0"]
+[ext_resource type="Texture2D" uid="uid://dh6a7qvyana43" path="res://sprites/proprietaire_1.png" id="9_x4aaw"]
+[ext_resource type="Texture2D" uid="uid://guxcue8ixfab" path="res://sprites/scaffold_base_1.png" id="10_oivvu"]
+[ext_resource type="Texture2D" uid="uid://cea4kbmjumy8n" path="res://sprites/proprietaire_2.png" id="10_tn8jk"]
+[ext_resource type="Texture2D" uid="uid://bxqpd2j3ljequ" path="res://sprites/proprietaire_3.png" id="11_dsakt"]
+[ext_resource type="Texture2D" uid="uid://bq8r1gdag0gfo" path="res://sprites/scaffold_base_2.png" id="11_g7v0d"]
+[ext_resource type="Texture2D" uid="uid://cb8rqs28axk76" path="res://sprites/scaffold_base_3.png" id="12_augx5"]
+[ext_resource type="Texture2D" uid="uid://utmlauir5cms" path="res://sprites/camarade_1.png" id="12_hc5nu"]
+[ext_resource type="Texture2D" uid="uid://cq8f6gfpjxjw6" path="res://sprites/camarade_2.png" id="13_aqo24"]
+[ext_resource type="Texture2D" uid="uid://b4yuquwrolju1" path="res://sprites/scaffold_bar_1.png" id="13_md0m0"]
+[ext_resource type="Texture2D" uid="uid://d3tutrg16m8c8" path="res://sprites/camarade_3.png" id="14_bs0gx"]
+[ext_resource type="Texture2D" uid="uid://bb8gwedy68u7h" path="res://sprites/scaffold_bar_2.png" id="14_odmpd"]
+[ext_resource type="Texture2D" uid="uid://ccfr0ltbucf3x" path="res://sprites/member_1.png" id="14_svq5d"]
+[ext_resource type="Texture2D" uid="uid://c34ubbshy74qf" path="res://sprites/scaffold_bar_3.png" id="15_nag4t"]
+[ext_resource type="Texture2D" uid="uid://bjk6txqa00unv" path="res://sprites/member_2.png" id="15_x4aaw"]
+[ext_resource type="Texture2D" uid="uid://dfmpjvpknx4tb" path="res://sprites/scaffold_support_1.png" id="16_agy6r"]
+[ext_resource type="Texture2D" uid="uid://cuxl5b0hl230h" path="res://sprites/member_3.png" id="16_tn8jk"]
+[ext_resource type="Texture2D" uid="uid://bgqw5lb4elklw" path="res://sprites/scaffold_support_2.png" id="17_svq5d"]
+[ext_resource type="Texture2D" uid="uid://bolnq04n4hjko" path="res://sprites/scaffold_support_3.png" id="18_x4aaw"]
+[ext_resource type="Texture2D" uid="uid://n04q8if3hot7" path="res://sprites/scaffold_top_1.png" id="19_tn8jk"]
+[ext_resource type="Texture2D" uid="uid://db5ef8clqmmw3" path="res://sprites/scaffold_top_2.png" id="20_dsakt"]
+[ext_resource type="Texture2D" uid="uid://d63mf43hiyqj" path="res://sprites/scaffold_top_3.png" id="21_hc5nu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxtur"]
-size = Vector2(7, 82)
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fqyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_md0m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_odmpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nag4t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfa40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_g7v0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_augx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_md0m0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e03om"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_x4aaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tn8jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dsakt")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1l6ox"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_hc5nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aqo24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bs0gx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xxhvd"]
 radius = 39.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ntdxu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bxtur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g45r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ng41p")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxhvd"]
 size = Vector2(6, 98)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_a642x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_svq5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_x4aaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tn8jk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_00xjj"]
 radius = 8.062258
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0kq4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_svq5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_x4aaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tn8jk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_02yu5"]
 radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g74w4"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_g74w4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_oivvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g7v0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_augx5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxhvd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_md0m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_odmpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nag4t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_00xjj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_agy6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_svq5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_x4aaw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02yu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_tn8jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dsakt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hc5nu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Hangperson" type="Node2D" unique_id=902780941]
 script = ExtResource("1_tde3e")
 
-[node name="Body" type="Node2D" parent="." unique_id=1870964593]
-
-[node name="ScaffoldToRope" type="PinJoint2D" parent="Body" unique_id=925217672]
-position = Vector2(118, -193)
-node_a = NodePath("../Rope")
-node_b = NodePath("../../Scaffold")
-
-[node name="Rope" type="RigidBody2D" parent="Body" unique_id=396700059]
-position = Vector2(122.00001, -152.00002)
-rotation = -0.08726646
-
-[node name="Sprite2D" type="Sprite2D" parent="Body/Rope" unique_id=2077419011]
+[node name="Rope" type="AnimatedSprite2D" parent="." unique_id=708948677]
+position = Vector2(177, -284)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_isqeo")
+sprite_frames = SubResource("SpriteFrames_0fqyo")
+autoplay = "default"
+speed_scale = 1.1
+offset = Vector2(-298, 478)
+script = ExtResource("5_odmpd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Rope" unique_id=1180540831]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_bxtur")
+[node name="ScaffoldToRope" type="DampedSpringJoint2D" parent="." unique_id=1280599095]
+position = Vector2(177, -284)
+node_a = NodePath("../Body/Head")
+node_b = NodePath("../Scaffold")
+disable_collision = false
+length = 74.0
+rest_length = 10.0
+stiffness = 64.0
+damping = 0.1
 
-[node name="RopeToHead" type="PinJoint2D" parent="Body" unique_id=1956996200]
-position = Vector2(125, -110)
-node_a = NodePath("../Rope")
-node_b = NodePath("../Head")
+[node name="Body" type="Node2D" parent="." unique_id=1870964593]
+position = Vector2(3, 18)
 
 [node name="Head" type="RigidBody2D" parent="Body" unique_id=897217739]
-position = Vector2(126, -74)
+position = Vector2(173, -221)
+mass = 0.5
 
-[node name="HeadSprite" type="Sprite2D" parent="Body/Head" unique_id=1984931127]
+[node name="HeadSprite" type="AnimatedSprite2D" parent="Body/Head" unique_id=2100723473]
+position = Vector2(0.19999695, 35.800003)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_bxtur")
+sprite_frames = SubResource("SpriteFrames_pfa40")
+autoplay = "default"
+speed_scale = 1.1
+offset = Vector2(-195, 120)
 
-[node name="ComradeSprite" type="Sprite2D" parent="Body/Head" unique_id=1390677951]
+[node name="FaceProprio" type="AnimatedSprite2D" parent="Body/Head" unique_id=215636700]
+position = Vector2(-115, 107)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_e03om")
+autoplay = "default"
+
+[node name="FaceCamarade" type="AnimatedSprite2D" parent="Body/Head" unique_id=1303722167]
 visible = false
+position = Vector2(-117, 108)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("4_810l7")
-
-[node name="ProprioSprite" type="Sprite2D" parent="Body/Head" unique_id=1980400483]
-position = Vector2(0, -14)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("5_g45r0")
+sprite_frames = SubResource("SpriteFrames_1l6ox")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Head" unique_id=815125229]
+position = Vector2(0.19999695, 35.800003)
 shape = SubResource("CircleShape2D_xxhvd")
 
 [node name="HeadToBody" type="PinJoint2D" parent="Body" unique_id=1568576109]
-position = Vector2(128, -34)
+position = Vector2(175, -148)
 node_a = NodePath("../Head")
 node_b = NodePath("../Body")
 
 [node name="Body" type="RigidBody2D" parent="Body" unique_id=263474123]
-position = Vector2(128, 16)
+position = Vector2(175, -98)
+mass = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/Body" unique_id=1887049555]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Body/Body" unique_id=2012252091]
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("6_g45r0")
+sprite_frames = SubResource("SpriteFrames_ntdxu")
+autoplay = "default"
+offset = Vector2(-195, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Body" unique_id=615023002]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_xxhvd")
 
 [node name="BodyToLeftArm" type="PinJoint2D" parent="Body" unique_id=210438780]
-position = Vector2(118, -15)
+position = Vector2(169, -128)
 node_a = NodePath("../Body")
 node_b = NodePath("../LeftArm")
+disable_collision = false
 
 [node name="LeftArm" type="RigidBody2D" parent="Body" unique_id=1671086527]
-position = Vector2(96, -9)
+position = Vector2(171, -125)
+mass = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/LeftArm" unique_id=1163679930]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftArm" unique_id=376860614]
+position = Vector2(-24.99997, 2.8000183)
 rotation = 3.1415927
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("7_ng41p")
+sprite_frames = SubResource("SpriteFrames_a642x")
+autoplay = "default"
+offset = Vector2(-170, 18)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LeftArm" unique_id=1752234475]
-position = Vector2(-23, 1)
+position = Vector2(-35.99997, -2.1999817)
 shape = SubResource("CircleShape2D_00xjj")
 
 [node name="BodyToRightArm" type="PinJoint2D" parent="Body" unique_id=669454550]
-position = Vector2(139, -15)
+position = Vector2(181, -128)
 node_a = NodePath("../Body")
 node_b = NodePath("../RightArm")
+disable_collision = false
 
 [node name="RightArm" type="RigidBody2D" parent="Body" unique_id=264264367]
-position = Vector2(157, -9)
+position = Vector2(179, -125)
+mass = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/RightArm" unique_id=1934093628]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Body/RightArm" unique_id=1599959060]
+position = Vector2(35.000046, 1.2000427)
+rotation = -3.1415925
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("8_lbuqe")
+sprite_frames = SubResource("SpriteFrames_a642x")
+autoplay = "default"
+offset = Vector2(-130, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/RightArm" unique_id=1850622039]
-position = Vector2(21, 2)
+position = Vector2(35.000046, 1.2000427)
 shape = SubResource("CircleShape2D_00xjj")
 
 [node name="BodyToLeftLeg" type="PinJoint2D" parent="Body" unique_id=394652067]
-position = Vector2(118, 60)
+position = Vector2(165, -54)
 node_a = NodePath("../Body")
 node_b = NodePath("../LeftLeg")
 
 [node name="LeftLeg" type="RigidBody2D" parent="Body" unique_id=1491960658]
-position = Vector2(108, 85)
+position = Vector2(155, -29)
+mass = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/LeftLeg" unique_id=397237250]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftLeg" unique_id=1845252040]
+position = Vector2(7, -6.9999957)
+rotation = -0.93375117
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("7_yfgup")
+sprite_frames = SubResource("SpriteFrames_0kq4c")
+autoplay = "default"
+offset = Vector2(-160, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LeftLeg" unique_id=1995040584]
-position = Vector2(-17, 18)
+position = Vector2(-6, 8)
 shape = SubResource("CircleShape2D_02yu5")
 
 [node name="BodyToRightLeg" type="PinJoint2D" parent="Body" unique_id=69041945]
-position = Vector2(139, 60)
+position = Vector2(186, -54)
 node_a = NodePath("../Body")
 node_b = NodePath("../RightLeg")
 
 [node name="RightLeg" type="RigidBody2D" parent="Body" unique_id=1279871892]
-position = Vector2(149, 86)
+position = Vector2(196, -28)
+mass = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/RightLeg" unique_id=396854148]
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="Body/RightLeg" unique_id=1180786476]
+position = Vector2(-6, -9)
+rotation = -2.178171
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("8_ng41p")
+sprite_frames = SubResource("SpriteFrames_0kq4c")
+autoplay = "default"
+offset = Vector2(-160, 10)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Body/RightLeg" unique_id=1692738069]
-position = Vector2(17, 20)
+position = Vector2(4, 7)
 shape = SubResource("CircleShape2D_02yu5")
 
 [node name="Scaffold" type="StaticBody2D" parent="." unique_id=1321459947]
 scale = Vector2(0.6, 0.6)
 
-[node name="Scaffold_1" type="Sprite2D" parent="Scaffold" unique_id=53181119]
-texture = ExtResource("2_thvrr")
-
-[node name="Scaffold_2" type="Sprite2D" parent="Scaffold" unique_id=1912918258]
-texture = ExtResource("3_bxtur")
-
-[node name="Scaffold_3" type="Sprite2D" parent="Scaffold" unique_id=73855393]
-texture = ExtResource("4_isqeo")
-
-[node name="Scaffold_4" type="Sprite2D" parent="Scaffold" unique_id=1100579777]
-texture = ExtResource("5_810l7")
-
 [node name="Anchor" type="CollisionShape2D" parent="Scaffold" unique_id=1732038164]
-position = Vector2(197, -322)
+position = Vector2(295, -473.3333)
 shape = SubResource("CircleShape2D_g74w4")
+
+[node name="ScaffoldBase" type="AnimatedSprite2D" parent="Scaffold" unique_id=155397421]
+sprite_frames = SubResource("SpriteFrames_g74w4")
+autoplay = "default"
+speed_scale = 1.1
+
+[node name="ScaffoldBar" type="AnimatedSprite2D" parent="Scaffold" unique_id=867392074]
+sprite_frames = SubResource("SpriteFrames_xxhvd")
+autoplay = "default"
+speed_scale = 1.1
+
+[node name="ScaffoldSupport" type="AnimatedSprite2D" parent="Scaffold" unique_id=498195719]
+sprite_frames = SubResource("SpriteFrames_00xjj")
+autoplay = "default"
+speed_scale = 1.1
+
+[node name="ScaffoldTop" type="AnimatedSprite2D" parent="Scaffold" unique_id=2140620593]
+sprite_frames = SubResource("SpriteFrames_02yu5")
+autoplay = "default"
+speed_scale = 1.1

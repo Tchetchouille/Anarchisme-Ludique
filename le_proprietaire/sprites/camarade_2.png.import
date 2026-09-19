@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4w85ugls6mfa"
-path="res://.godot/imported/body_4.png-33560fb5d8395157cbba08a1782bda6a.ctex"
+uid="uid://cq8f6gfpjxjw6"
+path="res://.godot/imported/camarade_2.png-ab3e8c80a927bb30dca59ba80f23b5e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/body_4.png"
-dest_files=["res://.godot/imported/body_4.png-33560fb5d8395157cbba08a1782bda6a.ctex"]
+source_file="res://sprites/camarade_2.png"
+dest_files=["res://.godot/imported/camarade_2.png-ab3e8c80a927bb30dca59ba80f23b5e0.ctex"]
 
 [params]
 
