@@ -1,18 +1,34 @@
 extends Node2D
 
+# Whether or not the person is a "propriétaire"
+var is_proprietaire = true
 var current_step : int = 0
-# Will hold the number of steps for drawing the scaffold
-var scaffold_threshold : int
 var rng = RandomNumberGenerator.new()
+# Parts of the hangman to draw for each wrong guess
+@onready var parts = [
+	$Scaffold/ScaffoldBase, 
+	$Scaffold/ScaffoldBar, 
+	$Scaffold/ScaffoldTop, 
+	$Scaffold/ScaffoldSupport,
+	$Body/Rope, 
+	$Body/Head, 
+	$Body/Body, 
+	$Body/LeftArm, 
+	$Body/RightArm, 
+	$Body/LeftLeg, 
+	$Body/RightLeg
+]
+# Parts of the hangman that need to be unfrozen
+@onready var body_parts = [
+	$Body/Head, 
+	$Body/Body, 
+	$Body/LeftArm, 
+	$Body/RightArm, 
+	$Body/LeftLeg, 
+	$Body/RightLeg
+]
+@onready var n_of_parts = parts.size()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	scaffold_threshold = $Scaffold.get_child_count()
-	pends_ton_proprietaire()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
@@ -20,15 +36,21 @@ func _input(event):
 
 # Advance the hangperson drawing by one step
 func advance(step):
-	if step < scaffold_threshold:
-		$Scaffold.get_child(step).visible = true
+	if step < n_of_parts:
+		parts[step].visible = true
+		current_step += 1
 	else:
-		activate_bodypart(current_step - scaffold_threshold)
-	current_step += 1
+		pends_ton_proprietaire()
 
-func activate_bodypart(i):
-	pass
 	
 func pends_ton_proprietaire():
+	# Adding back physics
+	for part in body_parts:
+		part.freeze = false
+	# Adding face based on character (propriétaire/comrade)
+	if is_proprietaire:
+		$Body/Head/FaceProprio.visible = true
+	else:
+		$Body/Head/FaceCamarade.visible = true
 	var random_impulse = rng.randi_range(-400.0, 400.0)
 	$Body/Body.apply_impulse(Vector2(random_impulse, 0))

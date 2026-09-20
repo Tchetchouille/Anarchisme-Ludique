@@ -237,8 +237,21 @@ animations = [{
 [node name="Hangperson" type="Node2D" unique_id=902780941]
 script = ExtResource("1_tde3e")
 
-[node name="Rope" type="AnimatedSprite2D" parent="." unique_id=708948677]
-position = Vector2(177, -284)
+[node name="Body" type="Node2D" parent="." unique_id=1870964593]
+position = Vector2(3, 18)
+
+[node name="Rope" type="DampedSpringJoint2D" parent="Body" unique_id=1280599095]
+visible = false
+position = Vector2(174, -302)
+node_a = NodePath("../Head")
+node_b = NodePath("../../Scaffold")
+disable_collision = false
+length = 20.0
+rest_length = 10.0
+stiffness = 64.0
+damping = 0.1
+
+[node name="Rope" type="AnimatedSprite2D" parent="Body/Rope" unique_id=708948677]
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_0fqyo")
 autoplay = "default"
@@ -246,21 +259,10 @@ speed_scale = 1.1
 offset = Vector2(-298, 478)
 script = ExtResource("5_odmpd")
 
-[node name="ScaffoldToRope" type="DampedSpringJoint2D" parent="." unique_id=1280599095]
-position = Vector2(177, -284)
-node_a = NodePath("../Body/Head")
-node_b = NodePath("../Scaffold")
-disable_collision = false
-length = 20.0
-rest_length = 10.0
-stiffness = 64.0
-damping = 0.1
-
-[node name="Body" type="Node2D" parent="." unique_id=1870964593]
-position = Vector2(3, 18)
-
 [node name="Head" type="RigidBody2D" parent="Body" unique_id=897217739]
+visible = false
 position = Vector2(173, -221)
+freeze = true
 
 [node name="HeadSprite" type="AnimatedSprite2D" parent="Body/Head" unique_id=2100723473]
 position = Vector2(0.19999695, 35.800003)
@@ -271,6 +273,7 @@ speed_scale = 1.1
 offset = Vector2(-195, 120)
 
 [node name="FaceProprio" type="AnimatedSprite2D" parent="Body/Head" unique_id=215636700]
+visible = false
 position = Vector2(-115, 107)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_e03om")
@@ -293,7 +296,9 @@ node_a = NodePath("../Head")
 node_b = NodePath("../Body")
 
 [node name="Body" type="RigidBody2D" parent="Body" unique_id=263474123]
+visible = false
 position = Vector2(175, -98)
+freeze = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/Body" unique_id=2012252091]
 scale = Vector2(0.6, 0.6)
@@ -312,8 +317,10 @@ node_b = NodePath("../LeftArm")
 disable_collision = false
 
 [node name="LeftArm" type="RigidBody2D" parent="Body" unique_id=1671086527]
+visible = false
 position = Vector2(174, -125)
 mass = 0.5
+freeze = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftArm" unique_id=376860614]
 position = Vector2(-24.99997, 2.8000183)
@@ -334,8 +341,10 @@ node_b = NodePath("../RightArm")
 disable_collision = false
 
 [node name="RightArm" type="RigidBody2D" parent="Body" unique_id=264264367]
+visible = false
 position = Vector2(177, -125)
 mass = 0.5
+freeze = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/RightArm" unique_id=1599959060]
 position = Vector2(35.000046, 1.2000427)
@@ -355,7 +364,9 @@ node_a = NodePath("../Body")
 node_b = NodePath("../LeftLeg")
 
 [node name="LeftLeg" type="RigidBody2D" parent="Body" unique_id=1491960658]
+visible = false
 position = Vector2(157, -32)
+freeze = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Body/LeftLeg" unique_id=1845252040]
 position = Vector2(7, -6.9999957)
@@ -375,8 +386,10 @@ node_a = NodePath("../Body")
 node_b = NodePath("../RightLeg")
 
 [node name="RightLeg" type="RigidBody2D" parent="Body" unique_id=1279871892]
+visible = false
 position = Vector2(193, -30)
 mass = 0.5
+freeze = true
 
 [node name="Sprite2D2" type="AnimatedSprite2D" parent="Body/RightLeg" unique_id=1180786476]
 position = Vector2(-6, -9)
@@ -398,21 +411,25 @@ position = Vector2(295, -473.3333)
 shape = SubResource("CircleShape2D_g74w4")
 
 [node name="ScaffoldBase" type="AnimatedSprite2D" parent="Scaffold" unique_id=155397421]
+visible = false
 sprite_frames = SubResource("SpriteFrames_g74w4")
 autoplay = "default"
 speed_scale = 1.1
 
 [node name="ScaffoldBar" type="AnimatedSprite2D" parent="Scaffold" unique_id=867392074]
+visible = false
 sprite_frames = SubResource("SpriteFrames_xxhvd")
 autoplay = "default"
 speed_scale = 1.1
 
 [node name="ScaffoldSupport" type="AnimatedSprite2D" parent="Scaffold" unique_id=498195719]
+visible = false
 sprite_frames = SubResource("SpriteFrames_00xjj")
 autoplay = "default"
 speed_scale = 1.1
 
 [node name="ScaffoldTop" type="AnimatedSprite2D" parent="Scaffold" unique_id=2140620593]
+visible = false
 sprite_frames = SubResource("SpriteFrames_02yu5")
 autoplay = "default"
 speed_scale = 1.1

@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 
-@onready var anchor =  $"../Scaffold/Anchor"
-@onready var head = $"../Body/Head"
+@onready var anchor =  $"../../../Scaffold/Anchor"
+@onready var head = $"../../Head"
 var starting_dist : float
 
 # Called when the node enters the scene tree for the first time.
