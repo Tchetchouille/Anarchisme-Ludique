@@ -5,22 +5,20 @@
 [ext_resource type="PackedScene" uid="uid://biyx4ynp2gjny" path="res://text_scenes/chosen_word.tscn" id="1_ktn5l"]
 [ext_resource type="PackedScene" uid="uid://c5m0deyv60x4s" path="res://hang_scenes/hangperson.tscn" id="3_vogqm"]
 
-[node name="GameScene" type="Control" unique_id=615237832]
-layout_mode = 3
+[node name="GameScene" type="MarginContainer" unique_id=1991544207]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 script = ExtResource("1_b3lu6")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=439207845]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
@@ -40,5 +38,5 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Hangperson" parent="HBoxContainer/Control" unique_id=902780941 instance=ExtResource("3_vogqm")]
-position = Vector2(260, 322)
+position = Vector2(260, 296)
 scale = Vector2(0.8, 0.8)
