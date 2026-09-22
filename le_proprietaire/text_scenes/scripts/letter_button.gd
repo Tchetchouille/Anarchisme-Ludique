@@ -21,6 +21,7 @@ func _on_pressed() -> void:
 	activate()
 	
 func activate():
-		disabled = true
-		print(chars)
-		$"../../../..".update_word(chars)
+		if not disabled:
+			disabled = true
+			print(chars)
+			$"../../../..".update_word(chars)
