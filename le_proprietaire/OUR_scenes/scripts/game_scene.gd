@@ -6,6 +6,7 @@ extends Control
 var word_found = []
 var erreurs = 0
 var tour = 0
+var n_of_parts = 12
 #var scene : PackedScene = preload("res://text_scenes/dash.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -49,10 +50,10 @@ func update_word(char:String):
 			word_found[i] = true
 		else :
 			fin_string += "_ "
-			pendre()
 	if err:
+		$VBoxContainer/HBoxContainer/Control/Hangperson.advance(erreurs)
 		erreurs += 1
-		if erreurs>=12:
+		if erreurs>=n_of_parts:
 			end_game_victoire()
 	print(tour," --- ", erreurs)
 	print(fin_string)

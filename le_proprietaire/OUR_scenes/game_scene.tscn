@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cltxamdkx0dpy" path="res://text_scenes/all_letters.tscn" id="1_6cw8a"]
 [ext_resource type="Script" uid="uid://d2dwhnqdvyguo" path="res://OUR_scenes/scripts/game_scene.gd" id="1_b3lu6"]
 [ext_resource type="PackedScene" uid="uid://biyx4ynp2gjny" path="res://text_scenes/chosen_word.tscn" id="1_ktn5l"]
+[ext_resource type="PackedScene" uid="uid://c5m0deyv60x4s" path="res://hang_scenes/hangperson.tscn" id="3_vogqm"]
 
 [node name="GameScene" type="Control" unique_id=615237832]
 layout_mode = 3
@@ -32,6 +33,10 @@ layout_mode = 2
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=222808705]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Hangperson" parent="VBoxContainer/HBoxContainer/Control" unique_id=902780941 instance=ExtResource("3_vogqm")]
+position = Vector2(171, 208.00002)
+scale = Vector2(0.6, 0.6)
 
 [node name="ChosenWord" parent="VBoxContainer" unique_id=571526054 instance=ExtResource("1_ktn5l")]
 layout_mode = 2
