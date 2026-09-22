@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _input(event):
-	if event is InputEventKey:
+	if event is InputEventKey and event.is_pressed():
 		# This works but lead to an error:
 		# Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
 		var key_char = char(event.unicode).to_upper()
@@ -21,7 +21,7 @@ func _on_pressed() -> void:
 	activate()
 	
 func activate():
-		if not disabled:
-			disabled = true
-			print(chars)
-			$"../../../..".update_word(chars)
+	if not disabled:
+		disabled = true
+		print(chars)
+		$"../../../..".update_word(chars)
