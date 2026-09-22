@@ -14,30 +14,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b3lu6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=635485373]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=439207845]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=439207845]
-layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="AllLetters" parent="VBoxContainer/HBoxContainer" unique_id=472253517 instance=ExtResource("1_6cw8a")]
-layout_mode = 2
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=222808705]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=635485373]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Hangperson" parent="VBoxContainer/HBoxContainer/Control" unique_id=902780941 instance=ExtResource("3_vogqm")]
-position = Vector2(171, 208.00002)
-scale = Vector2(0.6, 0.6)
+[node name="AllLetters" parent="HBoxContainer/VBoxContainer" unique_id=472253517 instance=ExtResource("1_6cw8a")]
+layout_mode = 2
 
-[node name="ChosenWord" parent="VBoxContainer" unique_id=571526054 instance=ExtResource("1_ktn5l")]
+[node name="ChosenWord" parent="HBoxContainer/VBoxContainer" unique_id=571526054 instance=ExtResource("1_ktn5l")]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=222808705]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Hangperson" parent="HBoxContainer/Control" unique_id=902780941 instance=ExtResource("3_vogqm")]
+position = Vector2(260, 322)
+scale = Vector2(0.8, 0.8)

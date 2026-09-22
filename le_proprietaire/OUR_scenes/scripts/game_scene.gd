@@ -24,8 +24,8 @@ func pick_random_word():
 
 func display_word_dash():
 	var pre_dash = preload("res://text_scenes/dash.tscn")
-	$VBoxContainer/ChosenWord/GridContainer/Center.size_flags_stretch_ratio = len(word)
-	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
+	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center.size_flags_stretch_ratio = len(word)
+	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
 
 func update_word(char:String):
 	var dico = check_letter_in_word(char)
@@ -39,11 +39,11 @@ func update_word(char:String):
 		else :
 			fin_string += "_ "
 	if err:
-		$VBoxContainer/HBoxContainer/Control/Hangperson.advance(erreurs)
+		$HBoxContainer/Control/Hangperson.advance(erreurs)
 		erreurs += 1
 		if erreurs>=n_of_parts:
 			end_game_victoire()
-	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
+	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
 	if not '_' in fin_string:
 		end_game_perdu()
 
@@ -60,9 +60,9 @@ func end_game_perdu():
 
 func end_game_victoire():
 	end_game()
-	$VBoxContainer/ChosenWord/Victory.emitting = true
+	$HBoxContainer/VBoxContainer/ChosenWord/Victory.emitting = true
 
 func end_game():
 	game_ended = true
-	for button in $VBoxContainer/HBoxContainer/AllLetters.get_children():
+	for button in $HBoxContainer/VBoxContainer/AllLetters.get_children():
 		button.disabled = true
