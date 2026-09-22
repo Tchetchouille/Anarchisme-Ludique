@@ -3,6 +3,7 @@ extends Control
 @export var all_words = null
 @export var word = null
 
+var game_ended = false
 var word_found = []
 var erreurs = 0
 var tour = 0
@@ -15,14 +16,8 @@ func _ready() -> void:
 	all_words = Array(all_words.strip_edges().split("\n"))
 	pick_random_word()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func pick_random_word():
 	word = all_words.pick_random()
-	print(word)
-	print(len(word))
 	for x in word:
 		word_found.append(false)
 	display_word_dash()
@@ -48,10 +43,8 @@ func update_word(char:String):
 		erreurs += 1
 		if erreurs>=n_of_parts:
 			end_game_victoire()
-	print(tour," --- ", erreurs)
-	print(fin_string)
 	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
-	if Array(fin_string.strip_edges().split(" ")) == word_found:
+	if not '_' in fin_string:
 		end_game_perdu()
 
 func check_letter_in_word(char:String):
@@ -63,10 +56,13 @@ func check_letter_in_word(char:String):
 	return dico
 
 func end_game_perdu():
-	pass
+	end_game()
 
 func end_game_victoire():
+	end_game()
 	$VBoxContainer/ChosenWord/Victory.emitting = true
 
-func pendre():
-	pass
+func end_game():
+	game_ended = true
+	for button in $VBoxContainer/HBoxContainer/AllLetters.get_children():
+		button.disabled = true
