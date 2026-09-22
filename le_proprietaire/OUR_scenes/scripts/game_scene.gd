@@ -31,13 +31,6 @@ func display_word_dash():
 	var pre_dash = preload("res://text_scenes/dash.tscn")
 	$VBoxContainer/ChosenWord/GridContainer/Center.size_flags_stretch_ratio = len(word)
 	$VBoxContainer/ChosenWord/GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
-	"""
-	for i in word:
-		var new_dash = scene.instantiate()
-		new_dash.set_anchors_preset(5, true)
-		new_dash.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		$GridContainer/Center.add_child(new_dash)
-	"""
 
 func update_word(char:String):
 	var dico = check_letter_in_word(char)

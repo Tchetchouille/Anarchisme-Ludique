@@ -249,7 +249,7 @@ disable_collision = false
 length = 20.0
 rest_length = 10.0
 stiffness = 64.0
-damping = 0.1
+damping = 0.5
 
 [node name="Rope" type="AnimatedSprite2D" parent="Body/Rope" unique_id=708948677]
 scale = Vector2(0.6, 0.6)
