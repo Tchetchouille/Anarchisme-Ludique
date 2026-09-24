@@ -1,5 +1,5 @@
 extends Label
-
+@export var font_size = 32
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 func window_size_changed():
 	var ratio = float(get_window().size.y)/float(ProjectSettings.get_setting("display/window/size/viewport_height"))
-	var calc_font_size = int(ratio * 32)
+	var calc_font_size = int(ratio * font_size)
 	set("theme_override_font_sizes/font_size", calc_font_size)
