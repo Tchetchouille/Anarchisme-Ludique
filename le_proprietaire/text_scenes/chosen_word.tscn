@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://biyx4ynp2gjny"]
 
+[ext_resource type="Script" uid="uid://cfuqy4mwwtbmw" path="res://text_scenes/scripts/label.gd" id="1_etjcp"]
 [ext_resource type="Texture2D" uid="uid://dyjrr7mxmxqw6" path="res://sprites/confetto.png" id="1_vgge0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0tmh"]
@@ -92,8 +93,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("1_etjcp")
 
 [node name="MarginRight" type="Control" parent="GridContainer" unique_id=1868869921]
 layout_mode = 2
