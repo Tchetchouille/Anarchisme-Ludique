@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://baoti6645tsup"]
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 22
+Label/font_sizes/font_size = 150
+RichTextLabel/colors/default_color = Color(0.55449736, 0.041814044, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/outline_size = 22
+RichTextLabel/font_sizes/normal_font_size = 150

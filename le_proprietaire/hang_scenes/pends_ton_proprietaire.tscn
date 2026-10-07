@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b56ycvaby3h71"]
+
+[ext_resource type="Theme" uid="uid://baoti6645tsup" path="res://resources/pends_ton_proprietaire.tres" id="1_7mirr"]
+[ext_resource type="Script" uid="uid://b6ypxu04h7g" path="res://hang_scenes/pends_ton_proprietaire.gd" id="1_e5pdt"]
+
+[node name="PendsTonProprietaire" type="Control" unique_id=745896493]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_e5pdt")
+
+[node name="Pends" type="RichTextLabel" parent="." unique_id=1721856367]
+visible = false
+layout_mode = 0
+offset_left = -86.0
+offset_top = 152.0
+offset_right = 562.0
+offset_bottom = 425.00003
+rotation = -0.39305165
+theme = ExtResource("1_7mirr")
+bbcode_enabled = true
+text = "[shake rate=20.0 level=10 connected=1]PENDS[/shake]
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PendsTimer" type="Timer" parent="Pends" unique_id=1052929199]
+wait_time = 0.2
+one_shot = true
+
+[node name="Ton" type="RichTextLabel" parent="." unique_id=763294675]
+visible = false
+layout_mode = 0
+offset_left = 820.99994
+offset_top = -4.0000305
+offset_right = 1469.0
+offset_bottom = 268.99997
+rotation = 0.46251225
+theme = ExtResource("1_7mirr")
+bbcode_enabled = true
+text = "[shake rate=20.0 level=10 connected=1]TON[/shake]"
+
+[node name="TonTimer" type="Timer" parent="Ton" unique_id=533540293]
+wait_time = 0.2
+one_shot = true
+
+[node name="Propriétaire" type="RichTextLabel" parent="." unique_id=1878474187]
+visible = false
+layout_mode = 0
+offset_left = -131.0
+offset_top = 364.0
+offset_right = 1246.0
+offset_bottom = 637.0
+theme = ExtResource("1_7mirr")
+bbcode_enabled = true
+text = "[rainbow freq=1.0 sat=0.9 val=0.8 speed=0.9][wave amp=50.0 freq=5.0 connected=1]PROPRIÉTAIRE
+[/wave][/rainbow]"
+horizontal_alignment = 1
+
+[node name="PropriétaireTimer" type="Timer" parent="Propriétaire" unique_id=1635126150]
+wait_time = 0.2
+one_shot = true
+
+[node name="EndTimer" type="Timer" parent="." unique_id=581234021]
+one_shot = true
+
+[connection signal="timeout" from="Pends/PendsTimer" to="." method="_on_pends_timer_timeout"]
+[connection signal="timeout" from="Ton/TonTimer" to="." method="_on_ton_timer_timeout"]
+[connection signal="timeout" from="Propriétaire/PropriétaireTimer" to="." method="_on_propriétaire_timer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]

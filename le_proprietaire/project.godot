@@ -29,7 +29,7 @@ folder_colors={
 "res://fonts/": "gray",
 "res://hang_scenes/": "red",
 "res://sounds/": "orange",
-"res://sprites/": "purple",
+"res://sprites and textures/": "purple",
 "res://text_scenes/": "teal"
 }
 

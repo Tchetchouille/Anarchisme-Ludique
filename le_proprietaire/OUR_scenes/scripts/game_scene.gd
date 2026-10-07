@@ -1,23 +1,33 @@
 extends Control
 
-@export var all_words = null
-@export var word = null
-
+var rng = RandomNumberGenerator.new()
+var all_words = null 
+var word = null
 var game_ended = false
 var word_found = []
 var erreurs = 0
 var tour = 0
 var n_of_parts = 12
+signal pendaison
+@onready var hangperson = $HBoxContainer/Control/Hangperson
 #var scene : PackedScene = preload("res://text_scenes/dash.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	all_words = FileAccess.open("res://data/liste_mots.txt", FileAccess.READ).get_as_text()
-	all_words = Array(all_words.strip_edges().split("\n"))
 	pick_random_word()
 
 func pick_random_word():
-	word = all_words.pick_random()
+	hangperson.is_proprietaire = rng.randi_range(0, 1)
+	var right_words = FileAccess.open("res://data/mots_droite.txt", FileAccess.READ).get_as_text()
+	right_words = Array(right_words.strip_edges().split("\n"))
+	var left_words = FileAccess.open("res://data/mots_gauche.txt", FileAccess.READ).get_as_text()
+	left_words = Array(left_words.strip_edges().split("\n"))
+	# If we are hanging the propriétaire, then the word must be from the right
+	if hangperson.is_proprietaire:
+		word = right_words.pick_random()
+	# If we are hanging the père Duchesne, then the word must be from the left
+	else:
+		word = left_words.pick_random()
 	for x in word:
 		word_found.append(false)
 	display_word_dash()
@@ -60,9 +70,14 @@ func end_game_perdu():
 
 func end_game_victoire():
 	end_game()
-	$HBoxContainer/VBoxContainer/ChosenWord/Victory.emitting = true
+	
 
 func end_game():
+	pendaison.emit()
 	game_ended = true
 	for button in $HBoxContainer/VBoxContainer/AllLetters.get_children():
 		button.disabled = true
+
+
+func _on_pends_ton_proprietaire_finally_hang() -> void:
+	hangperson.get_node('WaitForConfetti').start()

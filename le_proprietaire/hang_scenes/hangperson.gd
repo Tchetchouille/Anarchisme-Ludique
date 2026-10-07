@@ -40,17 +40,21 @@ func advance(step):
 		parts[step].visible = true
 		current_step += 1
 	else:
-		pends_ton_proprietaire()
-
+		# Adding face based on character (propriétaire/comrade)
+		if is_proprietaire:
+			$Body/Head/FaceProprio.visible = true
+		else:
+			# The camarade face contains a head already, so we hide the main head
+			$Body/Head/HeadSprite.visible = false
+			$Body/Head/FaceCamarade.visible = true
 	
 func pends_ton_proprietaire():
 	# Adding back physics
 	for part in body_parts:
 		part.freeze = false
-	# Adding face based on character (propriétaire/comrade)
-	if is_proprietaire:
-		$Body/Head/FaceProprio.visible = true
-	else:
-		$Body/Head/FaceCamarade.visible = true
 	var random_impulse = rng.randi_range(-400.0, 400.0)
 	$Body/Body.apply_impulse(Vector2(random_impulse, 0))
+
+
+func _on_wait_for_confetti_timeout() -> void:
+	pends_ton_proprietaire()
