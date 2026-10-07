@@ -29,11 +29,6 @@ var rng = RandomNumberGenerator.new()
 ]
 @onready var n_of_parts = parts.size()
 
-
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		advance(current_step)
-
 # Advance the hangperson drawing by one step
 func advance(step):
 	if step < n_of_parts:
