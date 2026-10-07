@@ -80,4 +80,7 @@ func end_game():
 
 
 func _on_pends_ton_proprietaire_finally_hang() -> void:
+	$"../Victory".emitting = true
+	$"../Victory2".emitting = true
+	$"../Victory3".emitting = true
 	hangperson.get_node('WaitForConfetti').start()

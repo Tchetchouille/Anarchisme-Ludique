@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://biyx4ynp2gjny" path="res://text_scenes/chosen_word.tscn" id="1_ktn5l"]
 [ext_resource type="PackedScene" uid="uid://c5m0deyv60x4s" path="res://hang_scenes/hangperson.tscn" id="3_vogqm"]
 [ext_resource type="PackedScene" uid="uid://b56ycvaby3h71" path="res://hang_scenes/pends_ton_proprietaire.tscn" id="6_iiv71"]
+[ext_resource type="PackedScene" uid="uid://j574t8211ld4" path="res://OUR_scenes/victory.tscn" id="7_0bihf"]
 
 [node name="GameScene" type="Control" unique_id=650265340]
 layout_mode = 3
@@ -64,6 +65,20 @@ scale = Vector2(0.8, 0.8)
 
 [node name="PendsTonProprietaire" parent="Container" unique_id=1014155179 instance=ExtResource("6_iiv71")]
 layout_mode = 2
+
+[node name="Victory" parent="." unique_id=26685877 instance=ExtResource("7_0bihf")]
+position = Vector2(596, 650)
+explosiveness = 0.98
+
+[node name="Victory2" parent="." unique_id=1334060446 instance=ExtResource("7_0bihf")]
+position = Vector2(1, 650)
+rotation = 0.5235988
+explosiveness = 0.98
+
+[node name="Victory3" parent="." unique_id=586436815 instance=ExtResource("7_0bihf")]
+position = Vector2(1153, 650)
+rotation = -0.5235988
+explosiveness = 0.98
 
 [connection signal="pendaison" from="Container" to="Container/PendsTonProprietaire" method="_on_container_pendaison"]
 [connection signal="finally_hang" from="Container/PendsTonProprietaire" to="Container" method="_on_pends_ton_proprietaire_finally_hang"]
