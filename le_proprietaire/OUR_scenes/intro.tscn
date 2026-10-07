@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1cqhvtrmyyb0"]
 
 [ext_resource type="Script" uid="uid://63aufxkfi413" path="res://OUR_scenes/scripts/pendre_button.gd" id="1_emmjh"]
+[ext_resource type="Script" uid="uid://c8edvyuyvmpmy" path="res://OUR_scenes/scripts/quitter_button.gd" id="2_w5avv"]
 
 [node name="Intro" type="Control" unique_id=1657686041]
 layout_mode = 3
@@ -10,21 +11,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PendreButton" type="Button" parent="." unique_id=1280140210]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=594791637]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -31.0
-offset_right = 64.0
-offset_bottom = 31.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=2044436470]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=266351618]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1144689242]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PendreButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1280140210]
+layout_mode = 2
+size_flags_vertical = 3
 text = "Pendre"
 script = ExtResource("1_emmjh")
 
-[connection signal="pressed" from="PendreButton" to="PendreButton" method="_on_pressed"]
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=328421232]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=890770423]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quitter"
+script = ExtResource("2_w5avv")
+
+[node name="Control3" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=2059795769]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer" unique_id=919976007]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/PendreButton" to="HBoxContainer/VBoxContainer/PendreButton" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="HBoxContainer/VBoxContainer/Button" method="_on_button_pressed"]
