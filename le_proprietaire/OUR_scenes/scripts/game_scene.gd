@@ -33,12 +33,11 @@ func pick_random_word():
 	display_word_dash()
 
 func display_word_dash():
-	var pre_dash = preload("res://text_scenes/dash.tscn")
 	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center.size_flags_stretch_ratio = len(word)
 	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
 
-func update_word(char:String):
-	var dico = check_letter_in_word(char)
+func update_word(chara:String):
+	var dico = check_letter_in_word(chara)
 	var fin_string = ""
 	tour += 1
 	var err  = !(true in dico["changes"])
@@ -57,18 +56,20 @@ func update_word(char:String):
 	if not '_' in fin_string:
 		end_game_perdu()
 
-func check_letter_in_word(char:String):
-	var dico = {"letter":char, "changes":[]}
+func check_letter_in_word(chara:String):
+	var dico = {"letter":chara, "changes":[]}
 	var changes = []
 	for c in word:
-		changes.append(c in char)
+		changes.append(c in chara)
 	dico["changes"] = changes
 	return dico
 
 func end_game_perdu():
+	print("PERDU")
 	end_game()
 
 func end_game_victoire():
+	print("GAGNE")
 	end_game()
 	
 
@@ -76,7 +77,11 @@ func end_game():
 	pendaison.emit()
 	game_ended = true
 	for button in $HBoxContainer/VBoxContainer/AllLetters.get_children():
-		button.disabled = true
+		var tween = get_tree().create_tween()
+		button.pivot_offset = button.size / 2
+		tween.tween_property(button, "scale", Vector2(0, 0), 0.2)
+		#await tween.finished
+	print("buttonTEST")
 
 
 func _on_pends_ton_proprietaire_finally_hang() -> void:

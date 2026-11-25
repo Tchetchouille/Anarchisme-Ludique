@@ -6,10 +6,10 @@ var scene : PackedScene = preload("res://text_scenes/letter_button.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for char in alphabet:
+	for chara in alphabet:
 		var new_button = scene.instantiate()
-		new_button.text=char
-		var chars = char
+		new_button.text=chara
+		var chars = chara
 		match char:
 			"A": chars += "ÂÀ"
 			"C": chars += "Ç"
@@ -18,9 +18,10 @@ func _ready() -> void:
 			"O": chars += "Ô"
 			"U": chars += "ÜÛÙ"
 		new_button.chars = chars
+		new_button.size_flags_vertical = SIZE_EXPAND_FILL
 		add_child(new_button)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
