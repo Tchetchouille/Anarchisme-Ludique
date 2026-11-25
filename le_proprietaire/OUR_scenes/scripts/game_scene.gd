@@ -80,8 +80,7 @@ func end_game():
 		var tween = get_tree().create_tween()
 		button.pivot_offset = button.size / 2
 		tween.tween_property(button, "scale", Vector2(0, 0), 0.2)
-		#await tween.finished
-	print("buttonTEST")
+	print("ACHTUNG!!! La victoire et la défaite peuvent être trigger plusieurs fois ET simultanément!!!")
 
 
 func _on_pends_ton_proprietaire_finally_hang() -> void:
