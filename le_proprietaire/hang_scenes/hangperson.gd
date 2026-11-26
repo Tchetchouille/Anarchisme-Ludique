@@ -51,5 +51,5 @@ func pends_ton_proprietaire():
 	$Body/Body.apply_impulse(Vector2(random_impulse, 0))
 
 
-func _on_wait_for_confetti_timeout() -> void:
+func _on_finally_hang_timer_timeout() -> void:
 	pends_ton_proprietaire()

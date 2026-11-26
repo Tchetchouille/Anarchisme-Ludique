@@ -80,5 +80,15 @@ position = Vector2(1153, 650)
 rotation = -0.5235988
 explosiveness = 0.98
 
+[node name="ButtonShrinkTimer" type="Timer" parent="." unique_id=1784613711]
+wait_time = 3.0
+one_shot = true
+
+[node name="RestartButtonTimer" type="Timer" parent="." unique_id=152358267]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="pendaison" from="Container" to="Container/PendsTonProprietaire" method="_on_container_pendaison"]
 [connection signal="finally_hang" from="Container/PendsTonProprietaire" to="Container" method="_on_pends_ton_proprietaire_finally_hang"]
+[connection signal="timeout" from="ButtonShrinkTimer" to="Container" method="_on_button_shrink_timer_timeout"]
+[connection signal="timeout" from="RestartButtonTimer" to="Container" method="_on_restart_button_timer_timeout"]

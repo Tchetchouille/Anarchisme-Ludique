@@ -438,8 +438,8 @@ sprite_frames = SubResource("SpriteFrames_02yu5")
 autoplay = "default"
 speed_scale = 1.1
 
-[node name="WaitForConfetti" type="Timer" parent="." unique_id=1982373859]
+[node name="FinallyHangTimer" type="Timer" parent="." unique_id=1982373859]
 wait_time = 0.6
 one_shot = true
 
-[connection signal="timeout" from="WaitForConfetti" to="." method="_on_wait_for_confetti_timeout"]
+[connection signal="timeout" from="FinallyHangTimer" to="." method="_on_finally_hang_timer_timeout"]

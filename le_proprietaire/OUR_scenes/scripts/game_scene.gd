@@ -75,16 +75,34 @@ func end_game_sauf():
 
 func end_game():
 	game_ended = true
-	for button in $HBoxContainer/VBoxContainer/AllLetters.get_children():
-		var tween = get_tree().create_tween()
-		button.pivot_offset = button.size / 2
-		tween.tween_property(button, "scale", Vector2(0, 0), 0.2)
+	$"../ButtonShrinkTimer".start()
 
 func _on_pends_ton_proprietaire_finally_hang() -> void:
+	hangperson.get_node('FinallyHangTimer').start()
 	if hangperson.is_proprietaire == 1:
 		$"../Victory".emitting = true
 		$"../Victory2".emitting = true
 		$"../Victory3".emitting = true
-		hangperson.get_node('WaitForConfetti').start()
 	else:
 		print("PAUVRE PÈRE DUCHESNE")
+
+
+func _on_button_shrink_timer_timeout() -> void:
+	var t = $"../RestartButtonTimer".wait_time
+	$"../RestartButtonTimer".start()
+	for button in $HBoxContainer/VBoxContainer/AllLetters.get_children():
+		var tween = get_tree().create_tween()
+		button.pivot_offset = button.size / 2
+		tween.tween_property(button, "scale", Vector2(0, 0), t)
+
+
+func _on_restart_button_timer_timeout() -> void:
+	var container = $HBoxContainer/VBoxContainer
+	var buttons = load("res://OUR_scenes/scripts/UI/end_buttons.tscn").instantiate()
+	# We need to remove the word to be able to add the button on top
+	var word_display = container.get_child(1)
+	container.get_child(0).queue_free()
+	container.remove_child(word_display)
+	container.add_child(buttons)
+	# We add the word back
+	container.add_child(word_display)
