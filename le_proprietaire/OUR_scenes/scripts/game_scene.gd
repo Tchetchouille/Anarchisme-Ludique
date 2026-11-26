@@ -37,24 +37,25 @@ func display_word_dash():
 	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center/Label.text = "_ ".repeat(len(word)).strip_edges()
 
 func update_word(chara:String):
-	var dico = check_letter_in_word(chara)
-	var fin_string = ""
-	tour += 1
-	var err  = !(true in dico["changes"])
-	for i in range(len(dico["changes"])):
-		if dico["changes"][i] or word_found[i]:
-			fin_string += word[i] + " "
-			word_found[i] = true
-		else :
-			fin_string += "_ "
-	if err:
-		$HBoxContainer/Control/Hangperson.advance(erreurs)
-		erreurs += 1
-		if erreurs>=n_of_parts:
-			end_game_victoire()
-	$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
-	if not '_' in fin_string:
-		end_game_perdu()
+	if not game_ended:
+		var dico = check_letter_in_word(chara)
+		var fin_string = ""
+		tour += 1
+		var err  = !(true in dico["changes"])
+		for i in range(len(dico["changes"])):
+			if dico["changes"][i] or word_found[i]:
+				fin_string += word[i] + " "
+				word_found[i] = true
+			else :
+				fin_string += "_ "
+		if err:
+			$HBoxContainer/Control/Hangperson.advance(erreurs)
+			erreurs += 1
+			if erreurs>=n_of_parts:
+				end_game_pendu()
+		$HBoxContainer/VBoxContainer/ChosenWord/GridContainer/Center/Label.text = fin_string.strip_edges()
+		if not '_' in fin_string:
+			end_game_sauf()
 
 func check_letter_in_word(chara:String):
 	var dico = {"letter":chara, "changes":[]}
@@ -64,27 +65,26 @@ func check_letter_in_word(chara:String):
 	dico["changes"] = changes
 	return dico
 
-func end_game_perdu():
-	print("PERDU")
+func end_game_pendu():
+	pendaison.emit()
 	end_game()
 
-func end_game_victoire():
-	print("GAGNE")
+func end_game_sauf():
 	end_game()
 	
 
 func end_game():
-	pendaison.emit()
 	game_ended = true
 	for button in $HBoxContainer/VBoxContainer/AllLetters.get_children():
 		var tween = get_tree().create_tween()
 		button.pivot_offset = button.size / 2
 		tween.tween_property(button, "scale", Vector2(0, 0), 0.2)
-	print("ACHTUNG!!! La victoire et la défaite peuvent être trigger plusieurs fois ET simultanément!!!")
-
 
 func _on_pends_ton_proprietaire_finally_hang() -> void:
-	$"../Victory".emitting = true
-	$"../Victory2".emitting = true
-	$"../Victory3".emitting = true
-	hangperson.get_node('WaitForConfetti').start()
+	if hangperson.is_proprietaire == 1:
+		$"../Victory".emitting = true
+		$"../Victory2".emitting = true
+		$"../Victory3".emitting = true
+		hangperson.get_node('WaitForConfetti').start()
+	else:
+		print("PAUVRE PÈRE DUCHESNE")
